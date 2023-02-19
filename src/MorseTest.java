@@ -5,10 +5,10 @@ class MorseTest {
     @org.junit.jupiter.api.Test
     void toMorseCode() {
         //given
-        Morse code = new Morse("hi how are you");
+        Morse code = new Morse();
         //when
-        String message = code.toMorseCode();
+        String message = code.toMorseCode("hi how are you");
         //then
-       assertEquals("**** ** **** --- *-- *- *-* * -*-- --- **- ", message);
+       assertEquals("**** ** **** --- *-- *- *-* * -*-- --- **- ", "hi how are you");
     }
 }
