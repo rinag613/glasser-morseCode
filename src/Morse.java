@@ -28,11 +28,12 @@ public class Morse {
     }
     public String morseToEnglish(String message) {
         StringBuilder english = new StringBuilder();
+        String[] messageArr = message.split(" ");
 
-        for (int i = 0; i < message.length(); i++) {
+        for (int i = 0; i < messageArr.length; i++) {
             for (int j = 0; j < code.length; j++) {
-                if (message.substring(i, i + 1).equals(code[j])) {
-                    english.append((char) (j + 'a')).append(" ");
+                if (messageArr[i].equals(code[j])) {
+                    english.append((char) (j + 'a'));
                 }
             }
         }
